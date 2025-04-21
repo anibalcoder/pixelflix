@@ -1,5 +1,6 @@
 import { CalendarIcon, FavoriteIcon, StarIcon } from '../icons/UI'
 import { FavoriteMediaItem, useFavoriteMediaStore } from '../../../store/favorites'
+import loadingSpinner from '../../../assets/gif/loading.gif'
 import noImageAviable from '../../../assets/images/noImageAviable.webp'
 
 interface HorizontalMediaPreviewProps extends FavoriteMediaItem {}
@@ -39,7 +40,7 @@ export const HorizontalMediaPreview: React.FC<HorizontalMediaPreviewProps> = ({ 
           <img
             className='lazy group-hover:scale-105 size-full object-cover object-center transition-transform duration-300'
             data-src={mediaItem.relativeBackdropPath ? `https://image.tmdb.org/t/p/w780/${mediaItem.relativeBackdropPath}` : noImageAviable}
-            src='/src/assets/gif/loading.gif'
+            src={loadingSpinner}
             alt={mediaItem.title}
           />
 
