@@ -1,0 +1,92 @@
+@import "tailwindcss";
+@import '@fontsource-variable/playfair-display';
+@import '@fontsource-variable/onest';
+@import 'swiper/css';
+@import 'swiper/css/navigation';
+
+@plugin "@midudev/tailwind-animations";
+
+@theme {
+  /* ========= Fonts ========= */
+  --font-playfair-display: 'Playfair Display Variable', serif;
+  --font-onest: 'Onest Variable', sans-serif;
+
+  /* ========= Backgrounds ======== */
+  --color-page: #004643;
+  --color-sidebar-menu: #003B36;
+  --color-media-carousel: #333024;
+  --color-featured-genres: #151f31;
+  --color-genres: #00332E;
+  --color-production-info: #17282F;
+  --color-search: #D9D9D9;
+  --color-horizontal-media-preview: #2C2C2C;
+  --color-skeleton: #CCC;
+  --color-skeleton-text: #4F4A42;
+  --color-btn-discover: #F9BC60;
+  --color-btn-favorite: #49443C;
+  --color-btn-duration: #64F00F;
+  --color-btn-popular: #F9E2AF;
+
+  /* ========= Texts ======== */
+  --color-discover-title: #FCDE70;
+  --color-btn-text-dark: #001E1D;
+  --color-btn-text-light: #ABD1C6;
+}
+
+@layer base {
+  :root {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-page text-white font-onest min-h-screen;
+  }
+
+  h1 {
+    @apply font-playfair-display font-bold leading-[1.15] animate-fade-in;
+    font-size: clamp(2rem, 5vw, 3rem);
+  }
+}
+
+@layer components {
+  .inner {
+    @apply w-full max-w-7xl px-4 py-14 md:py-24 mx-auto;
+  }
+
+  .hero-description {
+    @apply text-white/70 text-pretty animate-fade-in animate-delay-100;
+    font-size: clamp(1rem, 3vw, 1.125rem);
+  }
+
+  .grid-responsive {
+    @apply grid gap-x-12 gap-y-10 place-content-center;
+    grid-template-columns: repeat(auto-fit, minmax(auto, 320px));
+  }
+
+  .bento-grid {
+    @apply grid gap-6;
+    grid-template:
+      "anime" 200px
+      "western" 200px
+      "family" 200px
+      "terror" 200px / 1fr;
+  }
+}
+
+@media screen and ( 560px <= width <= 860px) {
+  .bento-grid {
+    grid-template:
+      "anime anime" 230px
+      "western family" 230px
+      "terror terror" 230px / 1fr 1fr;
+  }
+}
+
+@media screen and (width >= 860px) {
+  .bento-grid {
+    grid-template:
+      "anime anime terror" 260px
+      "western family terror" 260px
+      / 1fr 1fr 1fr;
+  }
+}
