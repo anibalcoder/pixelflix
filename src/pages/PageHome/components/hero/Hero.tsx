@@ -1,6 +1,8 @@
 import { Presentation } from './Presentation.tsx'
 import introVerticalVideo from '../../../../assets/video/introVertical.mp4'
 import introHorizontalVideo from '../../../../assets/video/introHorizontal.mp4'
+import introVerticalPoster from '../../../../assets/images/introVerticalPoster.webp'
+import introHorizontalPoster from '../../../../assets/images/introHorizontalPoster.webp'
 
 export function Hero () {
   return (
@@ -14,6 +16,7 @@ export function Hero () {
           <video
             className='hidden md:block size-full object-cover'
             src={introVerticalVideo}
+            poster={introVerticalPoster}
             autoPlay
             muted
             loop
@@ -22,6 +25,7 @@ export function Hero () {
           <video
             className='md:hidden size-full object-cover'
             src={introHorizontalVideo}
+            poster={introHorizontalPoster}
             autoPlay
             muted
             loop
