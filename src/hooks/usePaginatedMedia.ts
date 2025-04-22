@@ -6,6 +6,7 @@ export const usePaginatedMedia = ({ apiURL }: { apiURL: string }) => {
   const {
     data,
     isLoading,
+    isSuccess,
     isError,
     fetchNextPage,
     hasNextPage,
@@ -26,6 +27,7 @@ export const usePaginatedMedia = ({ apiURL }: { apiURL: string }) => {
   return {
     data: data?.pages.flatMap(page => page.media) ?? [],
     isLoading,
+    isSuccess,
     isError,
     fetchNextPage,
     hasNextPage,

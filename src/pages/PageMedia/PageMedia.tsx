@@ -28,6 +28,7 @@ export default function PageMedia ({ media }: PageMediaProps) {
       <Hero
         heroTitle={title}
         heroDescription={heroDescription}
+        media={media}
       />
 
       <GenreFilters media={media} />

@@ -32,13 +32,13 @@ export const footerNavItems: FooterSection[] = [
     links: [
       {
         title: 'Explorar películas',
-        link: '#',
+        link: '/movie/search?filter=trending',
         ariaLabel: 'Películas en tendencia',
         icon: CurvedArrowUpIcon
       },
       {
         title: 'Explorar series',
-        link: '/tendencias/series',
+        link: '/tv/search?filter=trending',
         ariaLabel: 'Series en tendencia',
         icon: CurvedArrowUpIcon
       }
@@ -49,13 +49,13 @@ export const footerNavItems: FooterSection[] = [
     links: [
       {
         title: 'Explorar películas',
-        link: '#',
+        link: '/movie/search?filter=popular',
         ariaLabel: 'Películas populares',
         icon: CurvedArrowUpIcon
       },
       {
         title: 'Explorar series',
-        link: '/populares/series',
+        link: '/tv/search?filter=popular',
         ariaLabel: 'Series populares',
         icon: CurvedArrowUpIcon
       }

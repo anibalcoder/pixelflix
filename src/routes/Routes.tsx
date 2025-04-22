@@ -6,6 +6,7 @@ import PageFavorites from '../pages/PageFavorites/PageFavorites'
 import PageSearch from '../pages/PageSearch/PageSearch'
 import PageGenre from '../pages/PageGenre/PageGenre'
 import PageMediaDetail from '../pages/PageMediaDetail/PageMediaDetail'
+import PageTrendsAnsPopular from '../pages/PageTrendsAndPopular/PageTrendsAndPopular'
 import PageNotFound from '../pages/PageNotFound/PageNotFound'
 
 export default function AppRoutes () {
@@ -38,6 +39,10 @@ export default function AppRoutes () {
 
         <Route
           path='/:media/:mediaId' element={<PageMediaDetail />}
+        />
+
+        <Route
+          path='/:media/search' element={<PageTrendsAnsPopular />}
         />
 
         <Route
